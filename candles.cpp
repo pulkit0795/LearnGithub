@@ -36,6 +36,27 @@ int main() {
                 }
             }
         }
+     if(Y<X){
+            diff = X-Y;
+            for(int i=0; i<N; i++){
+                for(int j=0; j<M; j++) {
+                    if( (i+j)%2 == 0)
+                        sum += diff;
+                    else
+                        sum += 0;
+                }
+            }
+        } else {
+            diff = Y - X;
+            for(int i=0; i<N; i++){
+                for(int j=0; j<M; j++) {
+                    if( (i+j)%2 == 0)
+                        sum += X;
+                    else
+                        sum += diff;
+                }
+            }
+        }
         
         cout << sum << endl;
     }
